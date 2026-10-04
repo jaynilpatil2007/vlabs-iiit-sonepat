@@ -22,6 +22,7 @@ import {
   buildVoltmeterStandalone,
   buildBjtStandalone,
   buildMosfetStandalone,
+  buildOpAmpStandalone,
 } from "@/components";
 
 // ── Model builder ─────────────────────────────────────────────────────────
@@ -60,6 +61,12 @@ function buildItemModel(item: ApparatusItem): THREE.Group {
     n.includes("mosfet")
   ) {
     return buildMosfetStandalone();
+  }
+  if(
+    n.includes("op-amp") ||
+    n.includes("LM741")
+  ) {
+    return buildOpAmpStandalone();
   }
   if (n.includes("power supply") || n.includes("supply") || n.includes("psu")) {
     return buildDcPowerSupplyStandalone();

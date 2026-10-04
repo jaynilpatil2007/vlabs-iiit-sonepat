@@ -304,6 +304,56 @@ export const COMPONENTS_DATA: Record<string, ComponentData> = {
     ],
   },
 
+  "op-amp": {
+    slug: "op-amp",
+    name: "Op-Amp LM741",
+    kind: "op-amp",
+    tagline:
+      "A general-purpose operational amplifier used for signal amplification and analog circuit processing.",
+    description: [
+      "The LM741 is a general-purpose operational amplifier (op-amp) commonly used in basic analog electronics experiments.",
+      "An operational amplifier amplifies the voltage difference between its inverting and non-inverting inputs and produces an output voltage.",
+      "The LM741 is available in an 8-pin DIP package and provides input, output, power supply, and offset-null connections for analog circuit applications.",
+    ],
+    intuition:
+      "Think of an op-amp as a very sensitive voltage difference amplifier. It compares the voltage at its + and − inputs and changes its output to amplify the difference between them.",
+    usedFor: [
+      "Voltage amplification",
+      "Inverting amplifier circuits",
+      "Non-inverting amplifier circuits",
+      "Voltage follower circuits",
+      "Summing amplifier experiments",
+      "Comparator and signal-processing experiments",
+      "Basic analog electronics laboratories",
+    ],
+    specs: [
+      { label: "Type", value: "Operational Amplifier" },
+      { label: "Part Number", value: "LM741" },
+      { label: "Package", value: "DIP-8" },
+      { label: "Inputs", value: "Inverting (−) and Non-inverting (+)" },
+      { label: "Output", value: "Single analog output" },
+      { label: "Supply", value: "V+ and V− supply pins" },
+      { label: "Additional Pins", value: "Offset-null and NC" },
+    ],
+    tips: [
+      "Identify the pin numbers and orientation of the DIP-8 package before connecting the IC.",
+      "Connect the appropriate positive and negative supply voltages before using the op-amp.",
+      "Use the inverting and non-inverting inputs correctly for the desired amplifier configuration.",
+      "Keep input voltages within the allowed operating range of the LM741.",
+      "Use feedback components such as resistors to control the gain of amplifier circuits.",
+      "Check the datasheet when selecting supply voltages and designing practical circuits.",
+    ],
+    commonMistakes: [
+      "Connecting the DIP-8 IC with the wrong orientation.",
+      "Confusing the inverting and non-inverting input pins.",
+      "Forgetting to connect the power supply pins.",
+      "Connecting the output directly to the power supply.",
+      "Using an incorrect feedback resistor configuration.",
+      "Applying input voltages outside the allowed operating range.",
+      "Assuming the LM741 behaves like an ideal op-amp in every situation.",
+    ],
+  },
+
   capacitor: {
     slug: "capacitor",
     name: "Capacitor",

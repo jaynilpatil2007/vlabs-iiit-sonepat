@@ -25,6 +25,7 @@ import {
   buildVoltmeterStandalone,
   buildBjtStandalone,
   buildMosfetStandalone,
+  buildOpAmpStandalone,
 } from "@/components";
 
 // ── Component kind type ───────────────────────────────────────────────────
@@ -36,6 +37,7 @@ export type EceComponentKind =
   | "resistor"
   | "bjt"
   | "mosfet"
+  | "op-amp"
   | "capacitor"
   | "potentiometer"
   | "ammeter"
@@ -67,6 +69,8 @@ function buildStandalone(kind: EceComponentKind): THREE.Group {
       return buildBjtStandalone();
     case "mosfet":
       return buildMosfetStandalone();
+    case "op-amp":
+      return buildOpAmpStandalone();
     case "capacitor":
       return buildCapacitorStandalone(100);
     case "potentiometer":
@@ -105,6 +109,7 @@ const CAM: Record<EceComponentKind, [number, number, number]> = {
   resistor: [1.5, 1.2, 1.8],
   bjt: [1.4, 1.2, 1.8],
   mosfet: [1.4, 1.2, 1.8],
+  "op-amp": [1.5, 2.2, 1.8],
   capacitor: [1.2, 1.8, 2.2],
   potentiometer: [1.4, 2.0, 2.2],
   ammeter: [1.4, 2.0, 2.2],
