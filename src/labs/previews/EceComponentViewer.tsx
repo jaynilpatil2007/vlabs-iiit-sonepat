@@ -18,11 +18,16 @@ import {
   buildIcMeterStandalone,
   buildDcPowerSupplyStandalone,
   buildMcuTrainerStandalone,
+  buildDiodeStandalone,
+  buildZenerDiodeStandalone,
+  buildZenerDiode,
 } from "@/components";
 
 // ── Component kind type ───────────────────────────────────────────────────
 export type EceComponentKind =
   | "breadboard"
+  | "diode"
+  | "zener-diode"
   | "led"
   | "resistor"
   | "capacitor"
@@ -42,6 +47,10 @@ function buildStandalone(kind: EceComponentKind): THREE.Group {
   switch (kind) {
     case "breadboard":
       return buildBreadboardStandalone();
+    case "diode":
+      return buildDiodeStandalone();
+    case "zener-diode":
+      return buildZenerDiodeStandalone();
     case "led":
       return buildLedStandalone("green");
     case "resistor":
@@ -74,6 +83,8 @@ function buildStandalone(kind: EceComponentKind): THREE.Group {
 // ── Camera presets ────────────────────────────────────────────────────────
 const CAM: Record<EceComponentKind, [number, number, number]> = {
   breadboard: [1.5, 2.2, 2.5],
+  diode: [1.5, 2.2, 2.5],
+  "zener-diode": [1.5, 2.5, 2.5],
   led: [1.2, 1.6, 2.0],
   resistor: [1.5, 1.2, 1.8],
   capacitor: [1.2, 1.8, 2.2],

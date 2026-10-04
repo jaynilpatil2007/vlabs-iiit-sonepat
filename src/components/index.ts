@@ -35,3 +35,10 @@ export { buildSwitchStandalone } from "./switch";
 export { buildPushButtonStandalone } from "./button";
 export { buildPotentiometerStandalone } from "./potentiometer";
 export { buildMcuTrainerStandalone } from "./mcu-trainer";
+
+export {
+  buildDiode,
+  buildDiodeStandalone,
+  buildZenerDiode,
+  buildZenerDiodeStandalone,
+} from "./diode";

@@ -16,6 +16,8 @@ import {
   buildWireStandalone,
   buildBreadboardStandalone,
   buildPotentiometerStandalone,
+  buildDiodeStandalone,
+  buildZenerDiodeStandalone,
 } from "@/components";
 
 // ── Model builder ─────────────────────────────────────────────────────────
@@ -25,12 +27,16 @@ function buildItemModel(item: ApparatusItem): THREE.Group {
   if (n.includes("resistor") || n.includes("ω") || n.includes("ohm")) {
     return buildResistorStandalone(parseOhms(item.name) ?? 470);
   }
-  if (
-    n.includes("zener") ||
-    n.includes("1n4") ||
-    (n.includes("diode") && !n.includes("led"))
-  ) {
-    return buildLedStandalone("yellow");
+  if (n.includes("1n4148")) {
+    return buildDiodeStandalone("1N4148");
+  }
+
+  if (n.includes("1n4007")) {
+    return buildDiodeStandalone("1N4007");
+  }
+
+  if (n.includes("1n4733a") || n.includes("zener")) {
+    return buildZenerDiodeStandalone();
   }
   if (n.includes("led")) {
     return buildLedStandalone(

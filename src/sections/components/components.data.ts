@@ -73,6 +73,98 @@ export const COMPONENTS_DATA: Record<string, ComponentData> = {
     ],
   },
 
+  diode: {
+    slug: "diode",
+    name: "1N4148 | 1N4007 Diode",
+    kind: "diode",
+
+    tagline: "A fast switching diode for controlling current direction.",
+
+    description: [
+      "The 1N4148 | 1N4007 is a small-signal switching diode designed to allow current to flow primarily in one direction.",
+      "It is commonly used in fast switching, signal processing, protection, and digital circuits where a compact general-purpose diode is required.",
+    ],
+
+    intuition:
+      "Think of a diode as a one-way valve for electrical current. The 1N4148 | 1N4007 is especially useful when that switching needs to happen quickly.",
+
+    usedFor: [
+      "Switching circuits",
+      "Signal processing",
+      "Logic circuits",
+      "Protection circuits",
+      "Clamping circuits",
+    ],
+
+    specs: [
+      { label: "Type", value: "Small-Signal Switching Diode" },
+      { label: "Package", value: "DO-35 Axial" },
+      { label: "Polarity", value: "Anode / Cathode" },
+      { label: "Part Number", value: "1N4148 | 1N4007" },
+    ],
+
+    tips: [
+      "The band on the diode body identifies the cathode.",
+      "Connect the diode in the correct direction for the intended current flow.",
+      "Check the diode's forward voltage and maximum current for the circuit.",
+      "Use a multimeter's diode-test mode to identify the diode and check its polarity.",
+    ],
+
+    commonMistakes: [
+      "Reversing the diode polarity.",
+      "Confusing the cathode band with the anode.",
+      "Exceeding the diode's maximum current.",
+      "Assuming every diode has the same electrical characteristics.",
+    ],
+  },
+
+  zener: {
+    slug: "zener",
+    name: "1N4733A Zener Diode",
+    kind: "zener-diode",
+
+    tagline:
+      "Maintain a relatively constant voltage when operated in reverse breakdown.",
+
+    description: [
+      "The 1N4733A is a Zener diode designed to operate in the reverse-breakdown region at a specified voltage.",
+      "Zener diodes are commonly used for voltage regulation, reference voltages, and protecting circuits from excessive voltage.",
+    ],
+
+    intuition:
+      "A normal diode mainly blocks reverse current, while a Zener diode is designed to safely conduct in reverse once its breakdown voltage is reached.",
+
+    usedFor: [
+      "Voltage regulation",
+      "Voltage references",
+      "Over-voltage protection",
+      "Clamping circuits",
+      "Signal limiting",
+    ],
+
+    specs: [
+      { label: "Type", value: "Zener Diode" },
+      { label: "Package", value: "DO-41 Axial" },
+      { label: "Nominal Voltage", value: "≈5.1V" },
+      { label: "Polarity", value: "Anode / Cathode" },
+      { label: "Part Number", value: "1N4733A" },
+    ],
+
+    tips: [
+      "The band identifies the cathode.",
+      "A series resistor is normally required to limit Zener current.",
+      "Operate the diode within its specified power rating.",
+      "Check the circuit current before selecting a Zener resistor.",
+    ],
+
+    commonMistakes: [
+      "Connecting the Zener without current limiting.",
+      "Reversing the diode orientation.",
+      "Exceeding the Zener's power rating.",
+      "Assuming the Zener voltage remains perfectly constant at every current.",
+    ],
+  },
+
   resistor: {
     slug: "resistor",
     name: "Resistor",
