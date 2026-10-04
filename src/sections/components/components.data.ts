@@ -388,6 +388,57 @@ export const COMPONENTS_DATA: Record<string, ComponentData> = {
     ],
   },
 
+  voltmeter: {
+    slug: "voltmeter",
+    name: "Analogue Voltmeter",
+    kind: "voltmeter",
+    tagline:
+      "Measures the potential difference (voltage) between two points in a circuit.",
+
+    description: [
+      "A voltmeter is an electrical measuring instrument used to measure the potential difference between two points in a circuit.",
+      "This analogue voltmeter has a 0–15 V DC range and displays the measured voltage using a pointer on a graduated scale.",
+      "A voltmeter is connected in parallel across the component or part of the circuit whose voltage is being measured.",
+    ],
+    intuition:
+      "Think of a voltmeter like a pressure gauge for electricity. It compares the electrical potential at two points without becoming a major part of the current path, so it is connected in parallel.",
+    usedFor: [
+      "Measuring voltage across circuit components",
+      "Verifying calculated voltage values",
+      "Studying Ohm's law",
+      "Measuring voltage drops across resistors and other components",
+      "Checking DC supply voltages in electronic circuits",
+      "Basic electrical and electronics laboratory experiments",
+    ],
+    specs: [
+      {
+        label: "Type",
+        value: "Analogue DC voltmeter",
+      },
+      { label: "Measurement Range", value: "0–15 V DC" },
+      { label: "Unit", value: "V" },
+      { label: "Connection", value: "Parallel" },
+      { label: "Display", value: "Analog pointer and scale" },
+      { label: "Polarity", value: "Positive (+) and Negative (−) terminals" },
+    ],
+    tips: [
+      "Always connect the voltmeter in parallel with the component or circuit section being measured.",
+      "Check the polarity before connecting the meter.",
+      "Start with the highest available voltage range when the expected voltage is unknown.",
+      "Do not exceed the 15 V measurement range.",
+      "Read the pointer carefully against the correct scale.",
+      "Make sure the pointer is at zero before taking a reading.",
+    ],
+    commonMistakes: [
+      "Connecting the voltmeter in series with the circuit.",
+      "Short-circuiting the power source through the meter.",
+      "Reversing the polarity of the meter.",
+      "Exceeding the 15 V measurement range.",
+      "Reading the wrong scale on the analogue dial.",
+      "Viewing the pointer from an angle and getting an incorrect reading.",
+    ],
+  },
+
   "push-button": {
     slug: "push-button",
     name: "Push Button",

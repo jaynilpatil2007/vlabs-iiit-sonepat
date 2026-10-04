@@ -22,6 +22,7 @@ import {
   buildDiodeStandalone,
   buildZenerDiodeStandalone,
   buildAmmeterStandalone,
+  buildVoltmeterStandalone,
 } from "@/components";
 
 // ── Component kind type ───────────────────────────────────────────────────
@@ -34,6 +35,7 @@ export type EceComponentKind =
   | "capacitor"
   | "potentiometer"
   | "ammeter"
+  | "voltmeter"
   | "push-button"
   | "switch"
   | "battery"
@@ -63,6 +65,8 @@ function buildStandalone(kind: EceComponentKind): THREE.Group {
       return buildPotentiometerStandalone();
     case "ammeter":
       return buildAmmeterStandalone();
+    case "voltmeter":
+      return buildVoltmeterStandalone();
     case "push-button":
       return buildPushButtonStandalone();
     case "switch":
@@ -94,6 +98,7 @@ const CAM: Record<EceComponentKind, [number, number, number]> = {
   capacitor: [1.2, 1.8, 2.2],
   potentiometer: [1.4, 2.0, 2.2],
   ammeter: [1.4, 2.0, 2.2],
+  voltmeter: [1.4, 2.0, 2.2],
   "push-button": [1.2, 1.6, 2.0],
   switch: [1.4, 1.6, 2.2],
   battery: [1.4, 2.4, 2.8],

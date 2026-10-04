@@ -42,3 +42,4 @@ export {
   buildZenerDiodeStandalone,
 } from "./diode";
 export { buildAmmeter, buildAmmeterStandalone } from "./ammeter";
+export { buildVoltmeter, buildVoltmeterStandalone } from "./voltmeter";

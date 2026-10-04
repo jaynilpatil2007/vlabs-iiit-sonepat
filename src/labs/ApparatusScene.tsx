@@ -19,6 +19,7 @@ import {
   buildDiodeStandalone,
   buildZenerDiodeStandalone,
   buildAmmeterStandalone,
+  buildVoltmeterStandalone,
 } from "@/components";
 
 // ── Model builder ─────────────────────────────────────────────────────────
@@ -52,6 +53,9 @@ function buildItemModel(item: ApparatusItem): THREE.Group {
   }
   if (n.includes("ammeter") || n.includes("milliammeter")) {
     return buildAmmeterStandalone();
+  }
+  if (n.includes("voltmeter")) {
+    return buildVoltmeterStandalone();
   }
   if (n.includes("multimeter") || n.includes("dmm") || n.includes("meter")) {
     return buildIcMeterStandalone(); // proper DMM model
