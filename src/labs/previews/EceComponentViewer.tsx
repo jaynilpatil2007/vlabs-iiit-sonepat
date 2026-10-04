@@ -31,6 +31,7 @@ import {
   buildFunctionGeneratorStandalone,
   buildTransformerStandalone,
   buildDipSwitchStandalone,
+  buildLogicAnalyzerStandalone,
 } from "@/components";
 
 // ── Component kind type ───────────────────────────────────────────────────
@@ -51,6 +52,7 @@ export type EceComponentKind =
   | "potentiometer"
   | "ammeter"
   | "voltmeter"
+  | "logic-analyser"
   | "push-button"
   | "switch"
   | "battery"
@@ -97,6 +99,8 @@ function buildStandalone(kind: EceComponentKind): THREE.Group {
       return buildAmmeterStandalone();
     case "voltmeter":
       return buildVoltmeterStandalone();
+    case "logic-analyser":
+      return buildLogicAnalyzerStandalone();
     case "push-button":
       return buildPushButtonStandalone();
     case "switch":
@@ -138,6 +142,7 @@ const CAM: Record<EceComponentKind, [number, number, number]> = {
   potentiometer: [1.4, 2.0, 2.2],
   ammeter: [1.4, 2.0, 2.2],
   voltmeter: [1.4, 2.0, 2.2],
+  "logic-analyser": [1.4, 2.0, 2.2],
   "push-button": [1.2, 1.6, 2.0],
   switch: [1.4, 1.6, 2.2],
   battery: [1.4, 2.4, 2.8],

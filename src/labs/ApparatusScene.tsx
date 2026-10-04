@@ -28,6 +28,7 @@ import {
   buildFunctionGeneratorStandalone,
   buildTransformerStandalone,
   buildDipSwitchStandalone,
+  buildLogicAnalyzerStandalone,
 } from "@/components";
 
 // ── Model builder ─────────────────────────────────────────────────────────
@@ -92,6 +93,11 @@ function buildItemModel(item: ApparatusItem): THREE.Group {
     n.includes("transformer")
   ) {
     return buildTransformerStandalone();
+  }
+  if(
+    n.includes("logic-analyser")
+  ) {
+    return buildLogicAnalyzerStandalone();
   }
   if (n.includes("power supply") || n.includes("supply") || n.includes("psu")) {
     return buildDcPowerSupplyStandalone();

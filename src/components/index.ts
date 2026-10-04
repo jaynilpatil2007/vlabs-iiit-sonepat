@@ -54,3 +54,7 @@ export {
 } from "./function-generater";
 export { buildTransformerStandalone, buildTransformer } from "./transformer";
 export { buildDipSwitchStandalone, buildDipSwitch } from "./dip-switch";
+export {
+  buildLogicAnalyzerStandalone,
+  buildLogicAnalyzer,
+} from "./logic-analyser";

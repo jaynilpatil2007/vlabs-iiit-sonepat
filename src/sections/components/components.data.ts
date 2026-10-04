@@ -783,6 +783,59 @@ export const COMPONENTS_DATA: Record<string, ComponentData> = {
     ],
   },
 
+  "logic-analyser": {
+    slug: "logic-analyser",
+    name: "Logic Analyser",
+    kind: "logic-analyser",
+    tagline:
+      "Captures and displays digital signals over time to help analyze logic states, timing, and communication protocols.",
+    description: [
+      "A logic analyser is an electronic test instrument used to observe multiple digital signals simultaneously.",
+      "It samples the logic levels of connected signals and displays them as waveforms, making it easier to study timing relationships, state changes, and digital communication.",
+      "Logic analysers are especially useful for debugging digital circuits and interfaces such as UART, SPI, and I²C.",
+    ],
+    intuition:
+      "Think of a logic analyser as a multi-channel camera for digital signals. Instead of only showing whether a signal is HIGH or LOW at one moment, it records changes over time so you can inspect what happened.",
+    usedFor: [
+      "Debugging digital logic circuits",
+      "Observing HIGH and LOW signal transitions",
+      "Analyzing timing relationships between digital signals",
+      "Debugging UART communication",
+      "Analyzing SPI and I²C communication",
+      "Checking clock and data signals",
+      "Studying microcontroller and embedded-system behavior",
+    ],
+    specs: [
+      { label: "Type", value: "Digital signal measurement instrument" },
+      { label: "Inputs", value: "Multiple digital channels" },
+      { label: "Signals", value: "Digital HIGH / LOW logic levels" },
+      { label: "Display", value: "Digital waveforms versus time" },
+      {
+        label: "Analysis",
+        value: "Timing, transitions, states, and protocols",
+      },
+      { label: "Common Protocols", value: "UART, SPI, I²C" },
+    ],
+    tips: [
+      "Connect the logic analyser ground to the circuit ground.",
+      "Connect each input channel to the correct digital signal before starting a capture.",
+      "Choose a sampling rate high enough to reliably capture the fastest signal transitions.",
+      "Label channels clearly so that clock, data, and control signals are easy to identify.",
+      "Use protocol decoders when analyzing interfaces such as UART, SPI, or I²C.",
+      "Make sure the input voltage levels are compatible with the logic analyser.",
+      "Use an appropriate capture duration so the required portion of the signal is recorded.",
+    ],
+    commonMistakes: [
+      "Forgetting to connect the analyser ground to the circuit ground.",
+      "Connecting a channel to the wrong signal.",
+      "Using a sampling rate that is too low for the signal being measured.",
+      "Exceeding the input voltage limits of the logic analyser.",
+      "Confusing digital logic levels with analog voltage measurements.",
+      "Incorrectly assigning protocol decoder settings.",
+      "Trying to analyze a signal without capturing enough time around the event of interest.",
+    ],
+  },
+
   "push-button": {
     slug: "push-button",
     name: "Push Button",
