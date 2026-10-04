@@ -24,6 +24,7 @@ import {
   buildMosfetStandalone,
   buildOpAmpStandalone,
   buildSevenSegmentStandalone,
+  buildOscilloscopeStandalone,
 } from "@/components";
 
 // ── Model builder ─────────────────────────────────────────────────────────
@@ -88,6 +89,12 @@ function buildItemModel(item: ApparatusItem): THREE.Group {
   }
   if (n.includes("battery")) {
     return buildBatteryStandalone();
+  }
+  if(
+    n.includes("oscilloscope") ||
+    n.includes("CRO")
+  ) {
+    return buildOscilloscopeStandalone();
   }
   if (n.includes("breadboard")) {
     const g = buildBreadboardStandalone();

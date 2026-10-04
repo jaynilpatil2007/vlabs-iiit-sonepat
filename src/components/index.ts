@@ -47,3 +47,4 @@ export { buildBjt, buildBjtStandalone } from "./bjt";
 export { buildMosfet, buildMosfetStandalone } from "./mosfet";
 export { buildOpAmpStandalone, buildOpAmp } from "./op-amp";
 export { buildSevenSegmentStandalone, buildSevenSegment } from "./sevensegment";
+export { buildOscilloscopeStandalone, buildOscilloscope } from "./oscilloscope";

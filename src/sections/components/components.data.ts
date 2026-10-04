@@ -765,6 +765,60 @@ export const COMPONENTS_DATA: Record<string, ComponentData> = {
     ],
   },
 
+  oscilloscope: {
+    slug: "oscilloscope",
+    name: "Oscilloscope / CRO",
+    kind: "oscilloscope",
+    tagline:
+      "Displays electrical signals as waveforms so their voltage, timing, and shape can be analyzed.",
+    description: [
+      "An oscilloscope is an electronic measurement instrument used to observe how an electrical signal changes over time.",
+      "A Cathode-Ray Oscilloscope (CRO) displays the input signal as a waveform, allowing characteristics such as voltage, time period, frequency, amplitude, and phase difference to be studied.",
+      "Unlike a voltmeter, which mainly provides a voltage reading, an oscilloscope allows students to see the actual shape and behavior of a signal.",
+    ],
+    intuition:
+      "Think of an oscilloscope as a camera for electrical signals. Instead of taking a picture of an object, it draws how voltage changes with time so you can see the signal's shape and behavior.",
+    usedFor: [
+      "Observing electrical waveforms",
+      "Measuring signal amplitude and frequency",
+      "Measuring time period and pulse width",
+      "Studying sine, square, and triangular waves",
+      "Comparing phase differences between signals",
+      "Debugging analog and digital circuits",
+      "Analyzing transient and time-varying signals",
+    ],
+    specs: [
+      { label: "Type", value: "Digital Oscilloscope / CRO" },
+      { label: "Display", value: "Voltage versus time waveform" },
+      {
+        label: "Measured Quantities",
+        value: "Voltage, time, frequency, period, phase",
+      },
+      { label: "Inputs", value: "Probe / Channel inputs" },
+      { label: "Horizontal Axis", value: "Time" },
+      { label: "Vertical Axis", value: "Voltage" },
+    ],
+    tips: [
+      "Connect the probe ground to the circuit ground before measuring a signal.",
+      "Choose an appropriate volts-per-division setting for the signal amplitude.",
+      "Adjust the time-per-division setting so several useful waveform cycles are visible.",
+      "Use the oscilloscope's trigger controls to obtain a stable waveform.",
+      "Use a suitable probe attenuation setting such as 1× or 10×.",
+      "Avoid exceeding the maximum input voltage of the oscilloscope.",
+      "Use measurement cursors or automatic measurements when precise readings are required.",
+    ],
+    commonMistakes: [
+      "Connecting the oscilloscope probe incorrectly.",
+      "Forgetting to connect the probe ground.",
+      "Using an unsuitable volts-per-division setting.",
+      "Using an unsuitable time-per-division setting.",
+      "Ignoring the probe attenuation setting.",
+      "Connecting the probe to a voltage beyond the oscilloscope's input rating.",
+      "Confusing waveform amplitude with peak-to-peak voltage.",
+      "Assuming a waveform is unstable when the trigger settings are incorrect.",
+    ],
+  },
+
   "dc-jack": {
     slug: "dc-jack",
     name: "DC Power Jack",

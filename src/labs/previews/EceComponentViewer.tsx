@@ -27,6 +27,7 @@ import {
   buildMosfetStandalone,
   buildOpAmpStandalone,
   buildSevenSegmentStandalone,
+  buildOscilloscopeStandalone
 } from "@/components";
 
 // ── Component kind type ───────────────────────────────────────────────────
@@ -47,6 +48,7 @@ export type EceComponentKind =
   | "push-button"
   | "switch"
   | "battery"
+  | "oscilloscope"
   | "dc-jack"
   | "xor-gate"
   | "and-gate"
@@ -89,6 +91,8 @@ function buildStandalone(kind: EceComponentKind): THREE.Group {
       return buildSwitchStandalone();
     case "battery":
       return buildBatteryStandalone();
+    case "oscilloscope": 
+      return buildOscilloscopeStandalone(); 
     case "dc-jack":
       return buildDcJackStandalone();
     case "xor-gate":
@@ -122,6 +126,7 @@ const CAM: Record<EceComponentKind, [number, number, number]> = {
   "push-button": [1.2, 1.6, 2.0],
   switch: [1.4, 1.6, 2.2],
   battery: [1.4, 2.4, 2.8],
+  oscilloscope: [1.5, 2.2, 2.8],
   "dc-jack": [1.4, 1.6, 2.2],
   "xor-gate": [1.6, 1.8, 2.4],
   "and-gate": [1.6, 1.8, 2.4],
