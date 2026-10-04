@@ -210,6 +210,53 @@ export const COMPONENTS_DATA: Record<string, ComponentData> = {
     ],
   },
 
+  bjt: {
+    slug: "bjt",
+    name: "BJT BC547",
+    kind: "bjt",
+    tagline:
+      "An NPN transistor used for switching and amplifying electronic signals.",
+    description: [
+      "The BC547 is a general-purpose NPN bipolar junction transistor (BJT) commonly used in low-power electronic circuits.",
+      "A BJT has three terminals: Collector, Base, and Emitter. A small current applied to the Base can control a larger current flowing between the Collector and Emitter.",
+      "The BC547 is commonly available in a small TO-92 package and is widely used for switching, amplification, and basic transistor experiments.",
+    ],
+    intuition:
+      "Think of a BJT like a current-controlled valve. A small current flowing into the Base controls a larger current flowing from the Collector to the Emitter.",
+    usedFor: [
+      "Electronic switching circuits",
+      "Signal amplification",
+      "Driving LEDs and other low-power loads",
+      "Building transistor-based logic circuits",
+      "Common-emitter amplifier experiments",
+      "Learning transistor biasing and operation",
+    ],
+    specs: [
+      { label: "Type", value: "NPN BJT" },
+      { label: "Part Number", value: "BC547" },
+      { label: "Package", value: "TO-92" },
+      { label: "Terminals", value: "Collector, Base, Emitter" },
+      { label: "Transistor Type", value: "Bipolar Junction Transistor" },
+      { label: "Typical Use", value: "Switching and amplification" },
+    ],
+    tips: [
+      "Identify the Collector, Base, and Emitter pins before connecting the transistor.",
+      "Use a suitable resistor to limit the Base current.",
+      "Check the transistor pinout because the physical pin arrangement can vary between transistor models.",
+      "Avoid exceeding the transistor's maximum voltage and current ratings.",
+      "For switching applications, provide sufficient Base current to turn the transistor on properly.",
+      "Use the correct biasing conditions when using the transistor as an amplifier.",
+    ],
+    commonMistakes: [
+      "Connecting the Collector, Base, and Emitter pins incorrectly.",
+      "Connecting the Base directly to a power source without a current-limiting resistor.",
+      "Exceeding the transistor's voltage or current ratings.",
+      "Assuming every TO-92 transistor has the same pinout.",
+      "Using incorrect biasing in an amplifier circuit.",
+      "Expecting the transistor to behave like a simple switch without providing appropriate Base current.",
+    ],
+  },
+
   capacitor: {
     slug: "capacitor",
     name: "Capacitor",

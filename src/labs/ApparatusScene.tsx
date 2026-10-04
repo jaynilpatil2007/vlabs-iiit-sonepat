@@ -20,6 +20,7 @@ import {
   buildZenerDiodeStandalone,
   buildAmmeterStandalone,
   buildVoltmeterStandalone,
+  buildBjtStandalone,
 } from "@/components";
 
 // ── Model builder ─────────────────────────────────────────────────────────
@@ -32,11 +33,9 @@ function buildItemModel(item: ApparatusItem): THREE.Group {
   if (n.includes("1n4148")) {
     return buildDiodeStandalone("1N4148");
   }
-
   if (n.includes("1n4007")) {
     return buildDiodeStandalone("1N4007");
   }
-
   if (n.includes("1n4733a") || n.includes("zener")) {
     return buildZenerDiodeStandalone();
   }
@@ -44,6 +43,13 @@ function buildItemModel(item: ApparatusItem): THREE.Group {
     return buildLedStandalone(
       n.includes("red") ? "red" : n.includes("blue") ? "blue" : "green",
     );
+  }
+  if (
+    n.includes("bc547") ||
+    n.includes("bjt") ||
+    n.includes("transistor")
+  ) {
+    return buildBjtStandalone();
   }
   if (n.includes("capacitor") || n.includes("µf") || n.includes("nf")) {
     return buildCapacitorStandalone(47e-6);

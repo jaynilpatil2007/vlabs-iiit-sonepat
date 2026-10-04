@@ -43,3 +43,4 @@ export {
 } from "./diode";
 export { buildAmmeter, buildAmmeterStandalone } from "./ammeter";
 export { buildVoltmeter, buildVoltmeterStandalone } from "./voltmeter";
+export { buildBjt, buildBjtStandalone } from "./bjt";

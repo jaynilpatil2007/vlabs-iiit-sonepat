@@ -23,6 +23,7 @@ import {
   buildZenerDiodeStandalone,
   buildAmmeterStandalone,
   buildVoltmeterStandalone,
+  buildBjtStandalone,
 } from "@/components";
 
 // ── Component kind type ───────────────────────────────────────────────────
@@ -32,6 +33,7 @@ export type EceComponentKind =
   | "zener-diode"
   | "led"
   | "resistor"
+  | "bjt"
   | "capacitor"
   | "potentiometer"
   | "ammeter"
@@ -59,6 +61,8 @@ function buildStandalone(kind: EceComponentKind): THREE.Group {
       return buildLedStandalone("green");
     case "resistor":
       return buildResistorStandalone(330);
+    case "bjt":
+      return buildBjtStandalone();
     case "capacitor":
       return buildCapacitorStandalone(100);
     case "potentiometer":
@@ -95,6 +99,7 @@ const CAM: Record<EceComponentKind, [number, number, number]> = {
   "zener-diode": [1.5, 2.5, 2.5],
   led: [1.2, 1.6, 2.0],
   resistor: [1.5, 1.2, 1.8],
+  bjt: [1.4, 1.2, 1.8],
   capacitor: [1.2, 1.8, 2.2],
   potentiometer: [1.4, 2.0, 2.2],
   ammeter: [1.4, 2.0, 2.2],
