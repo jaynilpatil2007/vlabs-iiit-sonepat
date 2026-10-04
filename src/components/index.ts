@@ -44,3 +44,4 @@ export {
 export { buildAmmeter, buildAmmeterStandalone } from "./ammeter";
 export { buildVoltmeter, buildVoltmeterStandalone } from "./voltmeter";
 export { buildBjt, buildBjtStandalone } from "./bjt";
+export { buildMosfet, buildMosfetStandalone } from "./mosfet";

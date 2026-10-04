@@ -257,6 +257,53 @@ export const COMPONENTS_DATA: Record<string, ComponentData> = {
     ],
   },
 
+  mosfet: {
+    slug: "mosfet",
+    name: "MOSFET 2N7000",
+    kind: "mosfet",
+    tagline:
+      "An N-channel MOSFET used for electronic switching and low-power control applications.",
+    description: [
+      "The 2N7000 is a general-purpose N-channel enhancement-mode MOSFET commonly used for switching and low-power electronic applications.",
+      "A MOSFET has three main terminals: Gate, Drain, and Source. The voltage applied to the Gate controls the current flowing between the Drain and Source.",
+      "The 2N7000 is available in a compact TO-92 package and is useful for learning how voltage-controlled electronic switches work.",
+    ],
+    intuition:
+      "Think of a MOSFET like an electrically controlled switch. The Gate controls whether current can flow between the Drain and Source, while ideally very little current flows into the Gate.",
+    usedFor: [
+      "Electronic switching circuits",
+      "Controlling LEDs and small loads",
+      "Microcontroller-controlled switching",
+      "Low-power motor and relay control",
+      "Digital logic interfacing",
+      "Learning MOSFET switching and characteristics",
+    ],
+    specs: [
+      { label: "Type", value: "N-channel MOSFET" },
+      { label: "Part Number", value: "2N7000" },
+      { label: "Package", value: "TO-92" },
+      { label: "Terminals", value: "Gate, Drain, Source" },
+      { label: "Mode", value: "Enhancement mode" },
+      { label: "Typical Use", value: "Low-power switching" },
+    ],
+    tips: [
+      "Identify the Gate, Drain, and Source pins before connecting the MOSFET.",
+      "Check the datasheet because the pin arrangement can vary between different MOSFET packages and manufacturers.",
+      "Use an appropriate Gate voltage to turn the MOSFET on.",
+      "Do not exceed the MOSFET's maximum Drain-Source voltage or current ratings.",
+      "Use a Gate resistor when appropriate to control switching transients.",
+      "A pull-down resistor on the Gate can help keep the MOSFET switched off when the control signal is disconnected.",
+    ],
+    commonMistakes: [
+      "Connecting the Gate, Drain, and Source pins incorrectly.",
+      "Assuming the MOSFET is turned on simply because it is connected to a circuit.",
+      "Applying an insufficient Gate voltage for the intended load current.",
+      "Exceeding the MOSFET's voltage or current ratings.",
+      "Leaving the Gate floating when a defined OFF state is required.",
+      "Assuming every TO-92 MOSFET has the same pinout.",
+    ],
+  },
+
   capacitor: {
     slug: "capacitor",
     name: "Capacitor",

@@ -21,6 +21,7 @@ import {
   buildAmmeterStandalone,
   buildVoltmeterStandalone,
   buildBjtStandalone,
+  buildMosfetStandalone,
 } from "@/components";
 
 // ── Model builder ─────────────────────────────────────────────────────────
@@ -53,6 +54,12 @@ function buildItemModel(item: ApparatusItem): THREE.Group {
   }
   if (n.includes("capacitor") || n.includes("µf") || n.includes("nf")) {
     return buildCapacitorStandalone(47e-6);
+  }
+  if (
+    n.includes("2n7000") ||
+    n.includes("mosfet")
+  ) {
+    return buildMosfetStandalone();
   }
   if (n.includes("power supply") || n.includes("supply") || n.includes("psu")) {
     return buildDcPowerSupplyStandalone();
