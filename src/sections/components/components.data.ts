@@ -345,6 +345,49 @@ export const COMPONENTS_DATA: Record<string, ComponentData> = {
     ],
   },
 
+  ammeter: {
+    slug: "ammeter",
+    name: "Analogue Ammeter",
+    kind: "ammeter",
+    tagline: "Measures electric current flowing through a circuit.",
+    description: [
+      "An ammeter is an electrical measuring instrument used to measure the current flowing through a circuit.",
+      "This analogue milliammeter has a 0–100 mA range and displays the measured current using a pointer on a graduated scale.",
+      "An ammeter must be connected in series with the component or branch whose current is being measured.",
+    ],
+    intuition:
+      "Think of an ammeter like a current counter placed directly in the path of moving charge. Since the current has to pass through the meter, the ammeter is connected in series.",
+    usedFor: [
+      "Measuring current in electronic circuits",
+      "Verifying calculated circuit current",
+      "Studying Ohm's law",
+      "Measuring current through resistors and other components",
+      "Basic electrical and electronics laboratory experiments",
+    ],
+    specs: [
+      { label: "Type", value: "Analogue milliammeter" },
+      { label: "Measurement Range", value: "0–100 mA" },
+      { label: "Unit", value: "mA" },
+      { label: "Connection", value: "Series" },
+      { label: "Display", value: "Analog pointer and scale" },
+      { label: "Polarity", value: "Positive (+) and Negative (−) terminals" },
+    ],
+    tips: [
+      "Always connect the ammeter in series with the circuit.",
+      "Check the polarity before connecting the meter.",
+      "Start with the highest available current range when the expected current is unknown.",
+      "Do not exceed the rated current range of the meter.",
+      "Make sure the pointer is at zero before taking a reading.",
+    ],
+    commonMistakes: [
+      "Connecting the ammeter directly across a voltage source.",
+      "Connecting the ammeter in parallel with a component.",
+      "Reversing the polarity of the meter.",
+      "Exceeding the 100 mA measurement range.",
+      "Reading the wrong scale or viewing the pointer from an angle.",
+    ],
+  },
+
   "push-button": {
     slug: "push-button",
     name: "Push Button",

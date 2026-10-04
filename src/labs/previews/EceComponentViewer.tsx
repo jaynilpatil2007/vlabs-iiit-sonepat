@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
+import { createVisualRenderer } from "@/platform/visuals/three-runtime/create-visual-renderer";
 import {
   buildBreadboardStandalone,
   buildDip14Standalone,
@@ -20,7 +21,7 @@ import {
   buildMcuTrainerStandalone,
   buildDiodeStandalone,
   buildZenerDiodeStandalone,
-  buildZenerDiode,
+  buildAmmeterStandalone,
 } from "@/components";
 
 // ── Component kind type ───────────────────────────────────────────────────
@@ -32,6 +33,7 @@ export type EceComponentKind =
   | "resistor"
   | "capacitor"
   | "potentiometer"
+  | "ammeter"
   | "push-button"
   | "switch"
   | "battery"
@@ -59,6 +61,8 @@ function buildStandalone(kind: EceComponentKind): THREE.Group {
       return buildCapacitorStandalone(100);
     case "potentiometer":
       return buildPotentiometerStandalone();
+    case "ammeter":
+      return buildAmmeterStandalone();
     case "push-button":
       return buildPushButtonStandalone();
     case "switch":
@@ -89,6 +93,7 @@ const CAM: Record<EceComponentKind, [number, number, number]> = {
   resistor: [1.5, 1.2, 1.8],
   capacitor: [1.2, 1.8, 2.2],
   potentiometer: [1.4, 2.0, 2.2],
+  ammeter: [1.4, 2.0, 2.2],
   "push-button": [1.2, 1.6, 2.0],
   switch: [1.4, 1.6, 2.2],
   battery: [1.4, 2.4, 2.8],
@@ -134,7 +139,8 @@ export function EceComponentViewer({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+    const renderer = createVisualRenderer({ canvas, antialias: true });
+    if (!renderer) return;
     renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
     renderer.setClearColor(background, 1);
 
