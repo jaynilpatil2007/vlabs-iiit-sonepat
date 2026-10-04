@@ -452,6 +452,59 @@ export const COMPONENTS_DATA: Record<string, ComponentData> = {
     ],
   },
 
+  transformer: {
+    slug: "transformer",
+    name: "Step-Down Transformer (Centre-Tap)",
+    kind: "transformer",
+    tagline:
+      "Reduces AC voltage and provides a centre-tapped secondary output for rectifier and power-supply circuits.",
+    description: [
+      "A step-down transformer is an electrical device that transfers AC electrical energy from one circuit to another while reducing the voltage.",
+      "This transformer has a centre-tapped secondary winding, which provides two equal secondary voltage sections with a common centre connection.",
+      "The transformer uses electromagnetic induction between the primary and secondary windings and provides electrical isolation between the input and output circuits.",
+    ],
+    intuition:
+      "Think of a transformer like a gearbox for AC voltage. The winding ratio determines how much the voltage is stepped down, while the centre tap divides the secondary winding into two equal sections.",
+    usedFor: [
+      "Reducing AC mains voltage to a lower AC voltage",
+      "Full-wave centre-tapped rectifier circuits",
+      "Low-voltage power supply circuits",
+      "AC-to-DC converter experiments",
+      "Providing isolated AC power to electronic circuits",
+      "Studying electromagnetic induction and transformer operation",
+    ],
+    specs: [
+      { label: "Type", value: "Step-down transformer" },
+      { label: "Secondary", value: "Centre-tapped" },
+      { label: "Input", value: "AC voltage" },
+      { label: "Output", value: "Reduced AC voltage" },
+      { label: "Windings", value: "Primary and centre-tapped secondary" },
+      { label: "Principle", value: "Mutual electromagnetic induction" },
+      {
+        label: "Isolation",
+        value: "Electrical isolation between primary and secondary",
+      },
+    ],
+    tips: [
+      "Connect the primary winding only to the specified AC supply voltage.",
+      "Identify the two ends and centre tap of the secondary winding before wiring the circuit.",
+      "Use the centre tap correctly when building a full-wave centre-tapped rectifier.",
+      "Do not exceed the transformer's rated voltage and current.",
+      "Remember that the transformer is designed for AC operation and should not be connected directly to a DC source.",
+      "Check the secondary voltage between each end and the centre tap separately.",
+      "Keep the primary and secondary sides electrically isolated in the circuit.",
+    ],
+    commonMistakes: [
+      "Connecting a transformer directly to a DC supply.",
+      "Applying an incorrect or excessive voltage to the primary winding.",
+      "Confusing the centre tap with one of the secondary winding ends.",
+      "Using the wrong secondary terminals in a centre-tapped rectifier.",
+      "Exceeding the rated secondary current.",
+      "Assuming the secondary voltage is measured the same between every pair of terminals.",
+      "Ignoring electrical isolation and incorrectly connecting primary and secondary grounds.",
+    ],
+  },
+
   capacitor: {
     slug: "capacitor",
     name: "Capacitor",

@@ -26,6 +26,7 @@ import {
   buildSevenSegmentStandalone,
   buildOscilloscopeStandalone,
   buildFunctionGeneratorStandalone,
+  buildTransformerStandalone,
 } from "@/components";
 
 // ── Model builder ─────────────────────────────────────────────────────────
@@ -80,6 +81,11 @@ function buildItemModel(item: ApparatusItem): THREE.Group {
     n.includes("seven-segment") 
   ) {
     return buildSevenSegmentStandalone();
+  }
+  if(
+    n.includes("transformer")
+  ) {
+    return buildTransformerStandalone();
   }
   if (n.includes("power supply") || n.includes("supply") || n.includes("psu")) {
     return buildDcPowerSupplyStandalone();

@@ -52,3 +52,4 @@ export {
   buildFunctionGeneratorStandalone,
   buildFunctionGenerator,
 } from "./function-generater";
+export { buildTransformerStandalone, buildTransformer } from "./transformer";

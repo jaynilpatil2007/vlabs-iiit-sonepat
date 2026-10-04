@@ -29,6 +29,7 @@ import {
   buildSevenSegmentStandalone,
   buildOscilloscopeStandalone,
   buildFunctionGeneratorStandalone,
+  buildTransformerStandalone,
 } from "@/components";
 
 // ── Component kind type ───────────────────────────────────────────────────
@@ -42,6 +43,7 @@ export type EceComponentKind =
   | "mosfet"
   | "op-amp"
   | "seven-segment"
+  | "transformer"
   | "function-generator"
   | "capacitor"
   | "potentiometer"
@@ -79,6 +81,8 @@ function buildStandalone(kind: EceComponentKind): THREE.Group {
       return buildOpAmpStandalone();
     case "seven-segment":
       return buildSevenSegmentStandalone();
+    case "transformer": 
+      return buildTransformerStandalone();
     case "function-generator":
       return buildFunctionGeneratorStandalone();
     case "capacitor":
@@ -123,6 +127,7 @@ const CAM: Record<EceComponentKind, [number, number, number]> = {
   mosfet: [1.4, 1.2, 1.8],
   "op-amp": [1.5, 2.2, 1.8],
   "seven-segment": [1.5, 2.0, 2.2],
+  "transformer": [1.5, 2.0, 2.2],
   "function-generator": [1.5, 2.0, 2.2],
   capacitor: [1.2, 1.8, 2.2],
   potentiometer: [1.4, 2.0, 2.2],
