@@ -401,6 +401,57 @@ export const COMPONENTS_DATA: Record<string, ComponentData> = {
     ],
   },
 
+  "function-generator": {
+    slug: "function-generator",
+    name: "Function / Signal Generator",
+    kind: "function-generator",
+    tagline:
+      "Generates controlled electrical waveforms such as sine, square, and triangular signals for circuit testing.",
+    description: [
+      "A function generator is an electronic instrument used to produce electrical signals with adjustable frequency, amplitude, and waveform.",
+      "It can generate common waveforms such as sine, square, and triangular waves, which can be applied to electronic circuits as test or input signals.",
+      "Function generators are commonly used together with oscilloscopes to observe how a circuit responds to different input signals.",
+    ],
+    intuition:
+      "Think of a function generator as a controlled signal source. You choose the shape, frequency, and strength of the signal, and the generator produces that waveform for your circuit.",
+    usedFor: [
+      "Generating test signals for electronic circuits",
+      "Testing amplifier circuits",
+      "Studying frequency response",
+      "Generating sine, square, and triangular waves",
+      "Testing filters and oscillators",
+      "Providing clock-like signals for digital circuits",
+      "Laboratory experiments involving AC and time-varying signals",
+    ],
+    specs: [
+      { label: "Type", value: "Function / Signal Generator" },
+      { label: "Waveforms", value: "Sine, Square, Triangle" },
+      { label: "Controls", value: "Frequency, Amplitude, Offset, Waveform" },
+      { label: "Output", value: "Adjustable electrical signal" },
+      { label: "Connection", value: "Output terminal / BNC" },
+      { label: "Typical Use", value: "Circuit testing and signal generation" },
+    ],
+    tips: [
+      "Select the required waveform before connecting the generator to the circuit.",
+      "Set the output amplitude to a safe level before applying the signal.",
+      "Choose an appropriate frequency for the circuit being tested.",
+      "Check the DC offset when working with circuits that require a specific bias voltage.",
+      "Use an oscilloscope to verify the actual waveform, amplitude, and frequency.",
+      "Connect the signal generator ground correctly to the circuit ground.",
+      "Avoid exceeding the input voltage limits of the circuit under test.",
+    ],
+    commonMistakes: [
+      "Setting an excessively high output amplitude.",
+      "Using the wrong waveform for the experiment.",
+      "Forgetting to check the DC offset.",
+      "Selecting an unsuitable frequency for the circuit.",
+      "Connecting the generator output incorrectly.",
+      "Ignoring the signal generator's output impedance.",
+      "Assuming the displayed amplitude always matches the voltage actually seen by the load.",
+      "Connecting the signal generator to a circuit without checking its input voltage limits.",
+    ],
+  },
+
   capacitor: {
     slug: "capacitor",
     name: "Capacitor",

@@ -25,6 +25,7 @@ import {
   buildOpAmpStandalone,
   buildSevenSegmentStandalone,
   buildOscilloscopeStandalone,
+  buildFunctionGeneratorStandalone,
 } from "@/components";
 
 // ── Model builder ─────────────────────────────────────────────────────────
@@ -69,6 +70,11 @@ function buildItemModel(item: ApparatusItem): THREE.Group {
     n.includes("LM741")
   ) {
     return buildOpAmpStandalone();
+  }
+  if(
+    n.includes("function-generator")
+  ) {
+    return buildFunctionGeneratorStandalone();
   }
   if(
     n.includes("seven-segment") 
