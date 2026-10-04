@@ -23,6 +23,7 @@ import {
   buildBjtStandalone,
   buildMosfetStandalone,
   buildOpAmpStandalone,
+  buildSevenSegmentStandalone,
 } from "@/components";
 
 // ── Model builder ─────────────────────────────────────────────────────────
@@ -67,6 +68,11 @@ function buildItemModel(item: ApparatusItem): THREE.Group {
     n.includes("LM741")
   ) {
     return buildOpAmpStandalone();
+  }
+  if(
+    n.includes("seven-segment") 
+  ) {
+    return buildSevenSegmentStandalone();
   }
   if (n.includes("power supply") || n.includes("supply") || n.includes("psu")) {
     return buildDcPowerSupplyStandalone();

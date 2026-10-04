@@ -26,6 +26,7 @@ import {
   buildBjtStandalone,
   buildMosfetStandalone,
   buildOpAmpStandalone,
+  buildSevenSegmentStandalone,
 } from "@/components";
 
 // ── Component kind type ───────────────────────────────────────────────────
@@ -38,6 +39,7 @@ export type EceComponentKind =
   | "bjt"
   | "mosfet"
   | "op-amp"
+  | "seven-segment"
   | "capacitor"
   | "potentiometer"
   | "ammeter"
@@ -71,6 +73,8 @@ function buildStandalone(kind: EceComponentKind): THREE.Group {
       return buildMosfetStandalone();
     case "op-amp":
       return buildOpAmpStandalone();
+    case "seven-segment":
+      return buildSevenSegmentStandalone();
     case "capacitor":
       return buildCapacitorStandalone(100);
     case "potentiometer":
@@ -110,6 +114,7 @@ const CAM: Record<EceComponentKind, [number, number, number]> = {
   bjt: [1.4, 1.2, 1.8],
   mosfet: [1.4, 1.2, 1.8],
   "op-amp": [1.5, 2.2, 1.8],
+  "seven-segment": [1.5, 2.0, 2.2],
   capacitor: [1.2, 1.8, 2.2],
   potentiometer: [1.4, 2.0, 2.2],
   ammeter: [1.4, 2.0, 2.2],

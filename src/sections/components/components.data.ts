@@ -354,6 +354,53 @@ export const COMPONENTS_DATA: Record<string, ComponentData> = {
     ],
   },
 
+  "seven-segment": {
+    slug: "seven-segment",
+    name: "7-Segment Display",
+    kind: "seven-segment",
+    tagline:
+      "A seven-LED display used to represent decimal digits and simple numeric values.",
+    description: [
+      "A 7-segment display is an electronic display made from seven individual LED segments arranged in the shape of the number 8.",
+      "By turning different segments on or off, the display can represent decimal digits from 0 to 9 and several other characters.",
+      "This component uses a common-cathode configuration, where the cathodes of all LED segments are connected together to a common ground connection.",
+    ],
+    intuition:
+      "Think of a 7-segment display as seven tiny LEDs working together like a digital stencil. By choosing which segments are turned on, different numbers can be drawn.",
+    usedFor: [
+      "Displaying decimal numbers",
+      "Digital counter circuits",
+      "Clock and timer displays",
+      "Seven-segment decoder experiments",
+      "Microcontroller display projects",
+      "Learning basic digital electronics",
+    ],
+    specs: [
+      { label: "Type", value: "7-Segment LED Display" },
+      { label: "Configuration", value: "Common Cathode" },
+      { label: "Segments", value: "7 LED segments (a–g)" },
+      { label: "Display", value: "Decimal digits 0–9" },
+      { label: "Common Terminal", value: "Cathode / Ground" },
+      { label: "Control", value: "Individual segment inputs" },
+    ],
+    tips: [
+      "Connect the common cathode terminal to ground.",
+      "Use a current-limiting resistor for each LED segment.",
+      "Identify the segment pins before connecting the display.",
+      "Turn on the required segments according to the digit you want to display.",
+      "Check the datasheet because the pin arrangement can vary between display models.",
+      "Avoid driving the LED segments above their rated current.",
+    ],
+    commonMistakes: [
+      "Connecting a common-cathode display as if it were common-anode.",
+      "Forgetting current-limiting resistors for the LED segments.",
+      "Connecting the wrong segment pins.",
+      "Assuming all 7-segment displays have the same pinout.",
+      "Exceeding the maximum current of an individual LED segment.",
+      "Connecting the common cathode to the positive supply instead of ground.",
+    ],
+  },
+
   capacitor: {
     slug: "capacitor",
     name: "Capacitor",
