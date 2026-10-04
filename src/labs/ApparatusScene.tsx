@@ -27,6 +27,7 @@ import {
   buildOscilloscopeStandalone,
   buildFunctionGeneratorStandalone,
   buildTransformerStandalone,
+  buildDipSwitchStandalone,
 } from "@/components";
 
 // ── Model builder ─────────────────────────────────────────────────────────
@@ -49,6 +50,11 @@ function buildItemModel(item: ApparatusItem): THREE.Group {
     return buildLedStandalone(
       n.includes("red") ? "red" : n.includes("blue") ? "blue" : "green",
     );
+  }
+  if(
+    n.includes("dip-switch")
+  ) {
+    return buildDipSwitchStandalone();
   }
   if (
     n.includes("bc547") ||

@@ -210,6 +210,55 @@ export const COMPONENTS_DATA: Record<string, ComponentData> = {
     ],
   },
 
+  "dip-switch": {
+    slug: "dip-switch",
+    name: "DIP Switch, 2/4/6/8-Pole",
+    kind: "dip-switch",
+    tagline:
+      "A compact set of individual switches used to configure digital circuits and select hardware options.",
+    description: [
+      "A DIP switch is a group of small manual switches packaged in a dual-in-line housing. Each switch can be independently turned ON or OFF.",
+      "DIP switches are commonly used to provide configuration inputs to digital circuits, allowing users to select operating modes, addresses, options, or logic states without changing the circuit wiring.",
+      "Available configurations include 2, 4, 6, or 8 individual switch poles, with each pole acting as an independent electrical switch.",
+    ],
+    intuition:
+      "Think of a DIP switch like a row of tiny ON/OFF controls. Each switch represents one binary choice, so an 8-pole DIP switch can provide eight independent configuration bits.",
+    usedFor: [
+      "Setting configuration options in digital circuits",
+      "Selecting operating modes",
+      "Setting binary input values",
+      "Hardware address selection",
+      "Logic circuit experiments",
+      "Microcontroller and embedded-system configuration",
+      "Testing different combinations of digital inputs",
+    ],
+    specs: [
+      { label: "Type", value: "DIP (Dual In-line Package) switch" },
+      { label: "Available Poles", value: "2, 4, 6, or 8" },
+      { label: "Operation", value: "Manual ON/OFF switching" },
+      { label: "Switches", value: "Individually controlled poles" },
+      { label: "Output", value: "Digital ON/OFF state" },
+      { label: "Mounting", value: "Through-hole / PCB mounted" },
+    ],
+    tips: [
+      "Check the ON marking on the switch body before deciding the switch state.",
+      "Treat each pole as an independent switch unless the circuit specifically connects them together.",
+      "Use appropriate pull-up or pull-down resistors when the DIP switch is connected to a digital input.",
+      "Make sure the switch voltage and current ratings are suitable for the circuit.",
+      "Avoid changing switch settings while the circuit is operating if the circuit is not designed for live configuration.",
+      "For binary configuration, document which switch corresponds to which bit or function.",
+    ],
+    commonMistakes: [
+      "Assuming all DIP switch poles are electrically connected together.",
+      "Misreading the ON direction of the switch.",
+      "Leaving a digital input floating without a pull-up or pull-down resistor.",
+      "Confusing the physical switch number with its binary bit position.",
+      "Exceeding the switch's voltage or current rating.",
+      "Changing configuration switches without considering how the circuit responds to the new state.",
+      "Assuming different DIP switch packages have identical pin layouts.",
+    ],
+  },
+
   bjt: {
     slug: "bjt",
     name: "BJT BC547",

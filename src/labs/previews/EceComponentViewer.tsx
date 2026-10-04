@@ -30,6 +30,7 @@ import {
   buildOscilloscopeStandalone,
   buildFunctionGeneratorStandalone,
   buildTransformerStandalone,
+  buildDipSwitchStandalone,
 } from "@/components";
 
 // ── Component kind type ───────────────────────────────────────────────────
@@ -38,6 +39,7 @@ export type EceComponentKind =
   | "diode"
   | "zener-diode"
   | "led"
+  | "dip-switch"
   | "resistor"
   | "bjt"
   | "mosfet"
@@ -71,6 +73,8 @@ function buildStandalone(kind: EceComponentKind): THREE.Group {
       return buildZenerDiodeStandalone();
     case "led":
       return buildLedStandalone("green");
+    case "dip-switch":
+      return buildDipSwitchStandalone();
     case "resistor":
       return buildResistorStandalone(330);
     case "bjt":
@@ -122,6 +126,7 @@ const CAM: Record<EceComponentKind, [number, number, number]> = {
   diode: [1.5, 2.2, 2.5],
   "zener-diode": [1.5, 2.5, 2.5],
   led: [1.2, 1.6, 2.0],
+  "dip-switch": [1.2, 1.6, 2.0],
   resistor: [1.5, 1.2, 1.8],
   bjt: [1.4, 1.2, 1.8],
   mosfet: [1.4, 1.2, 1.8],

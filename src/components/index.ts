@@ -53,3 +53,4 @@ export {
   buildFunctionGenerator,
 } from "./function-generater";
 export { buildTransformerStandalone, buildTransformer } from "./transformer";
+export { buildDipSwitchStandalone, buildDipSwitch } from "./dip-switch";
